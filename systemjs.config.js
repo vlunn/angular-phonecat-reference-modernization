@@ -6,16 +6,14 @@
   System.config({
     paths: {
       // paths serve as alias
-      'npm:': 'node_modules/'
+      'npm:': '../node_modules/'
     },
     // map tells the System loader where to look for things
     map: {
-      'ng-loader': '../src/systemjs-angular-loader.js',
 
       // our app is within the app folder
       'app': 'app',
 
-      // 
       '@angular/upgrade/static': 'npm:@angular/upgrade/bundles/upgrade-static.umd.js',
 
       // angular bundles
@@ -35,16 +33,13 @@
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {
       app: {
-        defaultExtension: 'js',
-        meta: {
-          './*.js': {
-            loader: 'systemjs-angular-loader.js'
-          }
-        }
-      },
-      rxjs: {
         defaultExtension: 'js'
-      }
+      },
+      'rxjs/ajax': { main: 'index.js', defaultExtension: 'js' },
+      'rxjs/operators': { main: 'index.js', defaultExtension: 'js' },
+      'rxjs/testing': { main: 'index.js', defaultExtension: 'js' },
+      'rxjs/websocket': { main: 'index.js', defaultExtension: 'js' },
+      'rxjs': { main: 'index.js', defaultExtension: 'js' },
     }
   });
 })(this);
