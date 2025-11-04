@@ -19,7 +19,7 @@
     "core-js": "^2.4.1",
     "rxjs": "6.0.0",
     "systemjs": "0.19.40",
-    "zone.js": "^0.8.4"
+    "zone.js": "^0.8.29"
   },
   "devDependencies": {
     "@types/angular": "^1.6.51",
@@ -41,7 +41,7 @@
     "typescript": "^3.1.1"
   },
   "scripts": {
-    "tsc": "tsc --version",
+    "tsc": "tsc",
     "tsc:w": "tsc -w",
     "postinstall": "bower install",
     "prestart": "npm install",
