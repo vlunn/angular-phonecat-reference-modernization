@@ -1,6 +1,3 @@
-declare var angular: angular.IAngularStatic;
-import { downgradeComponent } from '@angular/upgrade/static';
-
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
@@ -26,9 +23,3 @@ export class PhoneDetailComponent {
     this.mainImageUrl = imageUrl;
   }
 }
-
-angular.module('phoneDetail')
-  .directive(
-    'phoneDetail',
-    downgradeComponent({component: PhoneDetailComponent}) as angular.IDirectiveFactory
-  );
